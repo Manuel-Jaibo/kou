@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Menú, logo, etc -->
+    </header>
+
+
+<main>
+    <h1>¡Qué despensón!</h1>
+    <h2>Ingresa tu presupuesto semanal</h2>
+    <input type="number" id="myInput"> 
+
+        
+    <button type="button"  onclick="choca()"> 
+            Clic para obtener lista 
+    </button>
+    <script src="./scripts/myFunction.js"></script>
+    <script src="../models/Dairy.js"></script>
+    <script src="../data/getDairy.js"></script>
+    <script src="../routes/dairys.js"></script>
+</main>
+
+
+    <section>
+        <div>
+            <p id="valormyInput"></p>
+        </div>  
+
+        <div>
+            <h3 for="valorProteinas">Las proteínas que puedes comprar son:</h3>
+            <p id="valorProteinas"></p>
+        </div>
+    </section>
+
+
+<footer>
+    <!-- Footer -->
+</footer>
+</body>
+</html>
