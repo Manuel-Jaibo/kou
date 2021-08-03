@@ -37,6 +37,8 @@ app.use('/dairys', dairysRoutes);
 app.use('/proteins', proteinsRoutes);
 app.use('/crabs', crabsRoutes);
 app.use(express.static('public'));
+app.use(express.static('data'));
+
 
 //Rutas
 // app.get('/', (req, res) => {

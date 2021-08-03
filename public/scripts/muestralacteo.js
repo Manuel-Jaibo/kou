@@ -4,12 +4,13 @@ const mongoose = require('mongoose')
 
 
 
-//MODELS
-const Dairy = require('../../models/Dairy');
-
+//Importa módulo del modelo-esquema
+import "Dairy.js";
+const dairyProd = require('../../models/Dairy');
 
 async function muestralacteo() {
-    const roc = await Dairy.find({});
+    const roc = await dairyProd.find({});
     document.getElementById("valormyInput").innerHTML = "Tu presupuesto es de: $" + roc;
-    console.log(error, Dairy);
+    console.log(roc);
 }
+muestralacteo();

@@ -7,7 +7,7 @@ const DairySchema = new mongoose.Schema({
   precioporkg: Number
 }, { collection : 'dairy' });
 
-module.exports = mongoose.model('Dairy', DairySchema);
+// module.exports = mongoose.model('Dairy', DairySchema);
 
-// const dairyProd = mongoose.model('Dairy', DairySchema);
-// module.exports = dairyProd;
+const dairyProd = mongoose.model('Dairy', DairySchema);
+module.exports = dairyProd;
