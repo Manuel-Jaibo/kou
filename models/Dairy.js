@@ -8,3 +8,6 @@ const DairySchema = new mongoose.Schema({
 }, { collection : 'dairy' });
 
 module.exports = mongoose.model('Dairy', DairySchema);
+
+// const dairyProd = mongoose.model('Dairy', DairySchema);
+// module.exports = dairyProd;

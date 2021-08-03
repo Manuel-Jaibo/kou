@@ -38,7 +38,6 @@ app.use('/proteins', proteinsRoutes);
 app.use('/crabs', crabsRoutes);
 app.use(express.static('public'));
 
-
 //Rutas
 // app.get('/', (req, res) => {
 //   res.send('HOME!');
