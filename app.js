@@ -3,7 +3,8 @@ const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path')
-require('dotenv').config();
+// require ( 'dotenv' ) . config ( )
+
 
 const uri = "mongodb+srv://manuel:HoleHole.40@cluster0.dcnkz.mongodb.net/alcaldias?retryWrites=true&w=majority";
 
@@ -27,7 +28,6 @@ const db = mongoose.connection;
 const coyoacansRoutes = require('./api/routes/coyoacans')
 const gustavosRoutes = require('./api/routes/gustavos')
 const milpasRoutes = require('./api/routes/milpas')
-
 
 
 //MIDDLEWARE
