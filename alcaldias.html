@@ -18,17 +18,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Externos -->
-    <!--Favicon--> <link rel="shortcut icon" type="image/png" href="./jaiba.png"/> 
+    <!--Favicon--> <link rel="shortcut icon" type="image/png" href="./imgs/jaiba.png"/> 
     <!--Enlace a fontawesome--><script src="https://kit.fontawesome.com/bf4418249f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
         <header>
-                <div>
-                        Aqui va el logo
-                </div>
+                <img src="./imgs/logo.png" height="70px" alt="" srcset="">
 
                 <nav>
+                        <a href="./index.html">Inicio</a>
                         <a href="#">Blog</a>
                         <a href="./alcaldias.html">Alcaldías</a>
                 </nav>
@@ -41,19 +40,29 @@
                 <div class="alcaldias">
                         <div class="coyoacan">
                                 <img src="./imgs/coyoacan.png" height="150px" alt="" srcset="">
-                                <a href="http://localhost:5000/coyoacan">
-                                        <h3 class="tituloAlcaldias">Coyoacán</h3>
-                                </a>
+                                <a href="http://localhost:3000/coyoacan">
+                                        <h3 class="tituloAlcaldias">Coyoacán</h3></a>
+                                        <ul class="listaMercados">
+                                                <li><a href="http://localhost:3000/coyoacan/mercado-de-coyoacan">Mercado de Coyoacán</a></li>
+                                                <li><a href="http://localhost:3000/coyoacan/mercado-el-reloj">Mercado El reloj</a></li>
+                                        </ul>
+
                         </div>
 
                         <div class="gustavomadero">
                                 <img src="./imgs/gustavoamadero.png" height="150px" alt="" srcset="">
-                                <h3 class="tituloAlcaldias">Gustavo A. Madero</h3>
+                                <a href="http://localhost:3000/gustavo">
+                                        <h3 class="tituloAlcaldias">Gustavo A. Madero</h3>
+                                </a>
                         </div>
 
-                        <div class="iztapalapa">
-                                <img src="./imgs/iztapalapa.png" height= "150px" alt="" srcset="">
-                                <h3 class="tituloAlcaldias">Iztapalapa</h3>
+                        <div class="milpaalta">
+                                <img src="./imgs/milpaalta.png" height= "150px" alt="" srcset="">
+                                <a href="http://localhost:3000/milpa-alta">
+                                        <h3 class="tituloAlcaldias">Milpa Alta</h3></a>
+                                        <ul class="listaMercados">
+                                                <li><a href="http://localhost:3000/milpa-alta/san-pedro-atocpan">San Pedro Atocpan</a></li>
+                                        </ul>
                         </div>
 
                         <div class="coyoacan">
@@ -77,9 +86,8 @@
 
 
         <footer>
-                <div>
-                        Aqui va el logo
-                </div>
+                <img src="./imgs/logo.png" height="70px" alt="" srcset="">
+
                 <nav>
                         <a href="#">Blog</a>
                         <a href="./alcaldias.html">Alcaldías</a>

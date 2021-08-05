@@ -7,7 +7,7 @@ const path = require('path')
 const Coyoacan = require('../models/Coyoacan');
 
 
-// GET ITEMS
+// Función en ruta para obtener todos los datos de la colección/modelo Coyoacán
 router.get('/', async (req, res) => {
   try {
     const coyoacanFromDB = await Coyoacan.find({});
@@ -18,4 +18,43 @@ router.get('/', async (req, res) => {
     res.json({ message: err.message });
   }
 });
+
+
+
+//Para obtener lo que coincida con "Mercado de Coyoacán" de la colección/modelo Coyoacán
+router.get('/mercado-de-coyoacan', async (req, res) => {
+  try {
+    const mercadoDeCoyoacanFromDB = await Coyoacan.aggregate([
+      {
+          $match: {
+              mercado: 'Mercado de Coyoacán',
+          }
+      }
+      ]).project({ _id: 0 });
+    res.send(mercadoDeCoyoacanFromDB)
+  } 
+    catch (err) {
+    res.json({ message: err.message });
+  }
+});
+
+
+
+//Para obtener lo que coincida con "Mercado El reloj" de la colección/modelo Coyoacán
+router.get('/mercado-el-reloj', async (req, res) => {
+  try {
+    const mercadoElRelojFromDB = await Coyoacan.aggregate([
+      {
+          $match: {
+              mercado: 'Mercado El reloj',
+          }
+      }
+      ]).project({ _id: 0 });
+    res.send(mercadoElRelojFromDB)
+  } 
+    catch (err) {
+    res.json({ message: err.message });
+  }
+});
+
 module.exports = router;
