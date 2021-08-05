@@ -24,9 +24,7 @@ const db = mongoose.connection;
 
 
 //Import Routes
-// const coyoacansRoutes = require('./routes/coyoacans');
 const coyoacansRoutes = require('./api/routes/coyoacans')
-// const crabsRoutes = require('./routes/crabs')
 
 
 
@@ -34,9 +32,7 @@ const coyoacansRoutes = require('./api/routes/coyoacans')
 app.use(cors());
 app.use(express.json());
 app.use('/coyoacan', coyoacansRoutes);
-// app.use('/proteins', proteinsRoutes);
-// app.use('/crabs', crabsRoutes);
-// app.use(express.static('public'));
+app.use(express.static('views'));
 
 
 //Rutas
