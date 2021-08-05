@@ -1,17 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
+
 //MODELS
-const Dairy = require('../models/Dairy');
+const Dairy = require('../models/Coyoacan');
+
 
 // GET ITEMS
 router.get('/', async (req, res) => {
   try {
     const dairysFromDB = await Dairy.find();
-    res.json(dairysFromDB);
+    res.send(dairysFromDB);
+    // document.getElementById("valormyInput").innerHTML = dairysFromDB;
   } 
     catch (err) {
     res.json({ message: err.message });
   }
 });
 module.exports = router;
+
