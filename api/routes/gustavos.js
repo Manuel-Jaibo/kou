@@ -7,7 +7,7 @@ const path = require('path')
 const Gustavo = require('../models/Gustavo');
 
 
-// GET ITEMS
+// Función en ruta para obtener todos los datos de la colección/modelo Gustavo
 router.get('/', async (req, res) => {
   try {
     const gustavoFromDB = await Gustavo.find({});
@@ -18,4 +18,25 @@ router.get('/', async (req, res) => {
     res.json({ message: err.message });
   }
 });
+
+
+//Para obtener lo que coincida con "Gertrudis Sánchez" de la colección/modelo Gustavo
+router.get('/gertrudis-sanchez', async (req, res) => {
+  try {
+    const gertrudissanchezFromDB = await Gustavo.aggregate([
+      {
+          $match: {
+              mercado: 'Gertrudis Sánchez',
+          }
+      }
+      ]).project({ _id: 0 });
+    res.send(gertrudissanchezFromDB)
+  } 
+    catch (err) {
+    res.json({ message: err.message });
+  }
+});
+
+
+
 module.exports = router;
